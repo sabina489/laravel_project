@@ -25,9 +25,10 @@ class CreateStudentsTable extends Migration
             $table->string('temp-address', 150);
             $table->date('dob', 150);
             $table->string('blood-group', 3);
-            $table->boolean('is_active');
+            $table->boolean('is_active')->default(true);
             $table->boolean('is_almuni');
             $table->string('picture', 20);
+            $table->timestamps();
 
         });
     }
