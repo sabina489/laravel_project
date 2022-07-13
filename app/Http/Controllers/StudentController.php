@@ -14,7 +14,9 @@ class StudentController extends Controller
      */
     public function index()
     {
+        # select * from students
         $students = Student::all();
+        // dd($students);
         
         return view('student.index', compact('students'));
     }
@@ -37,7 +39,30 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $name = $request->get('name');
+        $email = $request->get('email');
+        $dob = $request->get('dob');
+        $image = $request->get('image');
+        $mobile = $request->get('mobile');
+
+        try {
+        Student::create([
+            'name' => $name,
+            'email' => $email,
+            'dob' => $dob,
+            'image' => $image,
+            'mobile' =>$mobile,
+            'is_active' =>true,
+            'is_almuni' =>false,
+
+        ]);
+        return redirect() -> route('student.index');
+    }
+    catch (\Exception $e) {
+        // dd($e->getMessage());
+        return redirect ()->back();
+    }
+
     }
 
     /**

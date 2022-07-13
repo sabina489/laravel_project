@@ -11,7 +11,8 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="POST" action="{{route('student.store')}}">
+                @csrf
                 <div class="card-body">
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
@@ -28,25 +29,41 @@
                   <div class="form-group">
                     <label for="exampleInputPassword1">DOB</label>
             
-                    <input type="password" class="form-control" 
+                    <input type="text" class="form-control" 
                     name="dob"
                     id="Date" placeholder="DOB">
                   </div>
                   <div class="form-group">
+                    <label for="exampleInputPassword1">Mobile</label>
+            
+                    <input type="text" class="form-control" 
+                    name="mobile"
+                    id="Date" placeholder="DOB">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Image</label>
+            
+                    <input type="text" class="form-control" 
+                    name="image"
+                    id="Date" placeholder="Image">
+                  </div>
+
+                  <!-- <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                        <input type="text" class="custom-file-input"
+                        name = "image" 
+                        id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile">Choose file</label> 
                       </div>
                       <div class="input-group-append">
                         <span class="input-group-text">Upload</span>
                       </div>
                     </div>
-                  </div>
-                  <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                  </div> -->
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
                 <!-- /.card-body -->

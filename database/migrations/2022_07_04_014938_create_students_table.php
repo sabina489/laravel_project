@@ -17,13 +17,13 @@ class CreateStudentsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->string('name', 150);
-            $table->string('mobile, 10')->unique();
+            $table->string('mobile', 10)->unique();
             $table->string('email', 150)->unique();
+            $table->date('dob', 150);
             $table->string('citizenship', 20)-> unique();
             $table->string('gender', 1);
             $table->string('perm-address', 150);
             $table->string('temp-address', 150);
-            $table->date('dob', 150);
             $table->string('blood-group', 3);
             $table->boolean('is_active')->default(true);
             $table->boolean('is_almuni');

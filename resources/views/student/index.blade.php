@@ -27,7 +27,9 @@
                       <th style="width: 10px">#</th>
                       <th>Name</th>
                       <th>Email</th>
-                    
+                      <th>DOB</th>
+                      <th>Image</th>
+                      <th>Mobile</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -36,6 +38,9 @@
                     <td>{{ $student->id }}</td>
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->email }}</td>
+                    <td>{{ $student->dob }}</td>
+                    <td>{{ $student->image }}</td>
+                    <td>{{$student->mobile}}</td>
                   </tr>
                   @endforeach
                   </tbody>

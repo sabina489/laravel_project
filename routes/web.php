@@ -15,10 +15,10 @@
 //     return view('welcome');
 // });
 
-//Route::get('student/create', 'StudentController@create') -> name('student.create');
 
 Route::resource('student', 'StudentController');
 
 
-
+//Route::get('student/create', 'StudentController@create') -> name('student.create');
+// Route::post('student','StudentController@store') -> name('student.store');
 
